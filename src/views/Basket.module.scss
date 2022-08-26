@@ -1,0 +1,120 @@
+.basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba($color: #b6b6b6, $alpha: 0.8);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__form {
+    background-color: white;
+    min-height: 80vh;
+    width: 50vw;
+    border-radius: 5px;
+
+    &__empty {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-top: 10rem;
+    }
+
+    &__close {
+      float: right;
+      padding: 5px 10px;
+      font-weight: 700;
+      font-size: 2.2rem;
+
+      &:hover {
+        color: grey;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__item {
+    &:first-child {
+      margin-top: 4rem;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.2rem 0;
+
+    &__img img {
+      width: 7vw;
+      height: 7vh;
+      object-fit: contain;
+    }
+
+    &__name {
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: 400;
+      width: 30rem;
+    }
+
+    &__buttons {
+      width: 20rem;
+      text-align: center;
+
+      &_button {
+        background-color: white;
+        color: rgb(77, 77, 77);
+        text-align: center;
+        width: 4rem;
+        height: 3rem;
+        border: none;
+        &:not(:nth-child(2)) {
+          border: 1px solid gray;
+        }
+        &:nth-child(2) {
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+        }
+        &:not(:nth-child(2)):hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__price {
+      margin-right: 5rem;
+      width: 30rem;
+      text-align: right;
+    }
+
+    &__delete {
+      margin-right: 4rem;
+    }
+    &__delete button {
+      width: 100%;
+      margin-right: 4rem;
+      padding: 1rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        background-color: lightcoral;
+      }
+    }
+  }
+
+  &__total {
+    float: right;
+    margin-right: 5rem;
+    font-size: 2rem;
+
+    &_price {
+      font-weight: 800;
+    }
+  }
+}
