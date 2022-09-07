@@ -1,7 +1,9 @@
 .products {
   display: flex;
-  padding: 10rem;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10rem;
 
   &__product {
     width: 42rem;

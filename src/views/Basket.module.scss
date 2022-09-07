@@ -13,7 +13,7 @@
   &__form {
     background-color: white;
     min-height: 80vh;
-    width: 50vw;
+    width: 75vw;
     border-radius: 5px;
 
     &__empty {
@@ -63,22 +63,26 @@
       text-align: center;
 
       &_button {
-        background-color: white;
-        color: rgb(77, 77, 77);
+        background-color: rgb(153, 153, 153);
+        color: white;
+        border-radius: 5px;
         text-align: center;
         width: 4rem;
         height: 3rem;
         border: none;
-        &:not(:nth-child(2)) {
-          border: 1px solid gray;
-        }
-        &:nth-child(2) {
-          border-top: 1px solid gray;
-          border-bottom: 1px solid gray;
-        }
-        &:not(:nth-child(2)):hover {
+        &:hover {
           cursor: pointer;
         }
+        // &:not(:nth-child(2)) {
+        //   border: 1px solid gray;
+        // }
+        // &:nth-child(2) {
+        //   border-top: 1px solid gray;
+        //   border-bottom: 1px solid gray;
+        // }
+        // &:not(:nth-child(2)):hover {
+        //   cursor: pointer;
+        // }
       }
     }
 
@@ -115,6 +119,34 @@
 
     &_price {
       font-weight: 800;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .basket {
+    &__form {
+      min-height: 100vh;
+      width: 100vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 726px) {
+  .basket {
+    &__item {
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        &_button {
+          background-color: rgb(153, 153, 153);
+          color: white;
+          border-radius: 5px;
+        }
+      }
+      &__delete {
+        margin-right: 0rem;
+      }
     }
   }
 }
